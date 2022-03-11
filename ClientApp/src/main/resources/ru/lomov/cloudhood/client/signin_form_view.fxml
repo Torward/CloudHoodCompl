@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="contentPane" prefHeight="480.0" prefWidth="480.0" styleClass="content-pane" stylesheets="@stylsheetauth.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.lomov.cloudhood.client.controllers.AuthFormViewController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="32.0" prefHeight="47.0" prefWidth="78.0" styleClass="label-enter" text="ВХОД">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="loginLoginField" layoutX="236.0" layoutY="202.0" prefHeight="23.0" prefWidth="223.0" styleClass="text-field" AnchorPane.rightAnchor="21.0" />
+      <PasswordField fx:id="passwordLoginField" layoutX="236.0" layoutY="258.0" prefHeight="23.0" prefWidth="223.0" AnchorPane.rightAnchor="21.0" />
+      <Button fx:id="signInBTN" layoutX="407.0" layoutY="309.0" mnemonicParsing="false" onAction="#signIn" prefHeight="23.0" prefWidth="100.0" styleClass="button-auth" text="ВОЙТИ" AnchorPane.rightAnchor="21.0" />
+      <Label layoutX="159.0" layoutY="210.0" text="логин" AnchorPane.rightAnchor="244.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="186.0" layoutY="266.0" text="пароль" AnchorPane.rightAnchor="244.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="416.0" prefHeight="47.0" prefWidth="279.0" text="Если, забыли пароль, воспользуйтесь кодом, который Вам показали при регистрации." wrapText="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="changePassword" layoutX="330.0" layoutY="32.0" mnemonicParsing="false" onAction="#processChangingPassword" prefHeight="27.0" prefWidth="129.0" styleClass="button-code" text="Забыл пароль" underline="true" AnchorPane.rightAnchor="21.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="changePasswordPane" layoutX="109.0" managed="false" prefHeight="407.0" prefWidth="368.0" styleClass="content-pane" visible="false" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="uidField" layoutX="124.0" layoutY="144.0" onAction="#sendUID" prefHeight="23.0" prefWidth="223.0" styleClass="text-field" AnchorPane.rightAnchor="21.0" />
+            <Label fx:id="alertLabel" layoutX="131.0" layoutY="236.0" prefHeight="47.0" prefWidth="223.0" text="Нажмите Enter чтобы поменять пароль." wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordLoginField1" layoutX="124.0" layoutY="185.0" onAction="#sendUID" prefHeight="23.0" prefWidth="223.0" AnchorPane.rightAnchor="21.0" />
+            <Label layoutX="36.0" layoutY="148.0" text="введите код">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="192.0" text="новый пароль">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
